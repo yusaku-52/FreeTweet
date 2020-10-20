@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeTweet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%# Font Awesome の読み込み %>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <div class= "header-logo">
+        <% if @current_user %>
+          <%= link_to("FreeTweet","/posts/index") %>
+        <% else %>
+          <%= link_to("FreeTweet","/home/top") %>
+        <% end %>
+        
+      </div>
+        
+      <div class = "header-list">
+        <% if @current_user %>
+          <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
+          <%= link_to("投稿一覧","/posts/index") %>
+          <%= link_to("投稿作成","/posts/new") %>
+          <%= link_to("ユーザー一覧","/users/index") %>
+          <%= link_to("ログアウト", "/logout", {method: :post}) %>
+        <% else %>
+          <%= link_to("新規登録","/users/signup") %>
+          <%= link_to("ログイン","/login") %>
+        <% end %>
+      </div>
+    </header>
+
+    <% if flash[:notice] %>
+      < class = "flash">
+        <%= flash[:notice] %>
+      </>
+    <% end %>
+    
+    <%= yield %>
+    
+    
+  </body>
+</html>

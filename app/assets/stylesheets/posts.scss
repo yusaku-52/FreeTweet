@@ -1,0 +1,172 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//posts/index
+.posts-list{
+    box-shadow: 0 2px 6px grey;
+    background-color: white;
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+.post-left img{
+    height: 70px;
+    width: 70px;
+    border-radius: 40%;
+    object-fit: cover;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-left{
+    float: left;    
+    width: 10%;
+}
+
+.post-right{
+    padding-left: 50px;
+    float: left;
+    width: 90%;
+}
+
+.post-user-name{
+    font-weight: 600;
+}
+
+.post-user-name a{
+    color: black;
+}
+
+.post-user-name :hover{
+    color:  rgb(8, 236, 8);
+}
+
+.post-right-content{
+    padding-top: 7px;
+}
+
+.post-right-content a{
+    color: black;
+    letter-spacing: 3px;
+}
+
+//posts/show
+.posts-show-item{
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 6px grey;
+    padding: 30px 20px 50px 20px;
+}
+
+.posts-image-name{
+    width: 100%;
+    position: relative;
+}
+
+.posts-image-name img{
+    height: 100px;
+    width: 100px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-image-name a{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    margin-left: 40px;
+    position: absolute;
+    top: 30%;    
+}
+
+.posts-image-name a:hover{
+    color:  rgb(8, 236, 8);
+}
+
+.show-content{
+    font-size: 25px;
+}
+
+.like-unlike{
+    padding-top: 8px;
+    float: left;
+    width: 30%;
+    margin-top: 2px;
+}
+
+.unlike-btn{
+    color: rgb(255, 0, 0);
+}
+
+.like-btn{
+    color: grey;
+}
+
+.fa-heart{
+    float: left;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.show-edit{
+    float:right;
+    margin-top: 10px;
+}
+
+.show-edit a{
+    margin-right: 10px;
+    color: grey;
+}
+
+//posts-new
+
+.tweet-page{
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(68, 65, 65);
+}
+
+.posts-new-item{
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 6px grey;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.post-form{
+    margin-bottom: 50px;
+}
+
+.post-form textarea{
+    display: block;
+    font-size: 15px;
+    margin: 0 auto;
+    border: inset 5px rgb(0, 46, 129);
+}
+
+.post-form input{
+    display: block;
+    float: right;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(142, 162, 253);
+    margin-top: 15px;
+    margin-right: 80px;
+    border-color: grey;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.post-form input:hover{
+    background-color: rgb(97, 97, 182);
+}
+
+//posts/edit
+
+.edit-title{
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(68, 65, 65);
+    padding-top: 50px;
+}

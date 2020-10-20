@@ -1,0 +1,220 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// users/index
+.user-list{
+    box-shadow: 0 2px 6px grey;
+    background-color: white;
+    padding: 20px 30px;   
+    height: 110px;
+    position: relative;
+}
+
+.user-list-image img{
+    height: 70px;
+    width: 70px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-list-image{
+    float: left;
+}
+
+.user-list-name{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.user-list-name a{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+
+.user-list-name a:hover{
+    color:  rgb(8, 236, 8);
+}
+
+// users/show
+.users-show{
+    text-align: center;
+}
+
+.user-information img{
+    height: 200px;
+    width: 200px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+    background-color: white;
+}
+
+.user-information h2{ 
+    margin-bottom: 0;
+    line-height: 20px;
+}
+
+.user-information p{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.user-information a{
+    box-shadow: 0 2px 6px #c1ced7;
+    border: 0.5px solid black;
+    background-color:white;
+    padding: 10px 15px;
+    color: black;
+    border-top-left-radius: 10% 50%;
+    border-top-right-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+}
+
+.user-information a:hover{
+    background-color: rgb(186, 255, 172);
+}
+
+.user-post-like{
+    background-color: white;
+    height: 50px;
+    box-shadow: 0 2px 6px #c1ced7;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 80px;
+}
+
+.user-post-like li{
+    list-style-type: none;
+    padding-top: 10px;
+    height: 100%;
+}
+
+.user-post-like li a{
+    font-size: 20px;
+    color: black;
+}
+
+.user-post-index{
+    float: left;
+    width: 50%;
+    border-bottom: 2px solid rgb(23, 224, 23);
+}
+
+.user-post-index:hover{
+    background-color: rgb(186, 255, 172);
+}
+
+.user-post-index a{
+    font-weight: 600;
+    padding: 10px 120px 7px 120px;
+}
+
+.user-like-index{
+    float: right;
+    width: 50%;
+}
+
+.user-like-index a{
+    padding: 10px 100px 7px 100px;
+}
+
+.user-like-index:hover{
+    background-color: rgb(186, 255, 172);
+}
+
+.user-post-list{
+    background-color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+    margin-top: 0;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+.user-post-image{
+    float: left;
+}
+
+.user-post-image img{
+    height: 80px;
+    width: 80px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+    background-color: white;
+}
+
+.show-user-content{
+    margin-left: 100px;
+    text-align: left;
+}
+
+.show-user-content a{
+    color: black;
+}
+
+.post-spacing{
+    letter-spacing: 3px;
+}
+
+.show-user-name{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.show-user-name a:hover{
+    color: rgb(8, 236, 8) ;
+}
+
+// users/likes
+// users/showから引き継ぎ。ボーダーだけ変更
+
+.user-post-none{
+    border-bottom: none;
+}
+
+.user-like-border{
+    border-bottom: 2px solid rgb(23, 224, 23);
+}
+
+// users-edit
+.edit-title{
+    color: rgb(95, 93, 93);
+}
+
+.form{
+    box-shadow: 0 2px 6px grey;
+    background-color: white;
+    padding: 20px 30px; 
+    padding-bottom: 40px;
+}
+
+.form input{
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #d8dadf;
+    width: 100%;
+}
+
+.form p{
+    margin-bottom: 2px;
+}
+
+.button{
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+    background-color: rgb(8, 236, 8);
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(5, 223, 5);
+}
+
+.submit-button{
+    float: right;
+    margin-top: 50px;
+    width: 30%;
+}

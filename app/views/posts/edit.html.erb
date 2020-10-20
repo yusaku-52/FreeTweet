@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="container">
+        <h1 class="edit-title">編集画面</h1>
+        <div class="posts-new-item">
+            <%# 配列の[0]を置き換えるか、エラー文が存在するかでif文で日本語でエラー分を表示できるかも %>
+            <% @post.errors.full_messages.each do |message| %>
+                <%= message %>
+            <% end %>
+
+            <%= form_tag("/posts/#{@post.id}/update") do %>
+                <div class="post-form">
+                    <textarea name="content" cols="40" rows="10"><%= @post.content %></textarea>
+                    <input type="submit" value ="保存" name="" id="">
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

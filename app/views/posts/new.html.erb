@@ -1,0 +1,16 @@
+<div class ="main">
+    <div class ="container">
+        <p class="tweet-page">Let's Tweet!</p>
+        <div class="posts-new-item">
+            <%= form_tag("/posts/create") do %>
+                <% @post.errors.full_messages.each do |message| %>
+                    <p><%= message %></p>
+                <% end %>
+                <div class = "post-form">
+                    <textarea name="content" cols="40" rows="10"><%= @post.content %></textarea>
+                    <input type="submit">
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

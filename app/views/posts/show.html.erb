@@ -1,0 +1,42 @@
+
+
+<div class ="main">
+    <div class ="container">
+        <div>
+            <div class = "posts-show-item">
+                <div class ="posts-image-name">
+                    <img src="<%= "/user_images/#{@user.image_name}" %>">
+                    <%= link_to(@user.name,"/users/#{@user.id}") %>
+                </div>
+                <p class="show-content">
+                    <%= @post.content %>
+                </p>    
+                <div class = "post-time">
+                    <%= @post.created_at %>
+                </div>
+
+                <div class="like-unlike">
+                    <% if Like.find_by(user_id: @current_user.id,post_id: @post.id) %>
+                        <%= link_to("/likes/#{@post.id}/destroy",{method: "post"}) do %>
+                            <span class ="fa fa-heart unlike-btn"></span>
+                        <% end %>
+                    <% else %>
+                        <%= link_to("/likes/#{@post.id}/create",{method: "post"}) do %>
+                            <span class ="fa fa-heart like-btn"></span>
+                        <% end %>
+                    <% end %>
+                    <div class="likes-count">
+                        <%= @likes_count %>
+                    </div>
+                </div>
+
+                <% if @current_user.id == @post.user_id %>
+                    <div class="show-edit">
+                        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+                        <%= link_to("削除", "/posts/#{@post.id}/destroy",{method: "post"}) %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
