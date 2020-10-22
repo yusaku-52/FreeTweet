@@ -32,16 +32,17 @@
           <%= link_to("ユーザー一覧","/users/index") %>
           <%= link_to("ログアウト", "/logout", {method: :post}) %>
         <% else %>
-          <%= link_to("新規登録","/users/signup") %>
-          <%= link_to("ログイン","/login") %>
+          <a class="header-new-btn">新規登録</a>
+          <a class="header-login-btn">ログイン</a>
         <% end %>
       </div>
     </header>
 
     <% if flash[:notice] %>
-      < class = "flash">
+      <div class = "flash" id="slide-flash">
         <%= flash[:notice] %>
-      </>
+        <span class="fa fa-1g fa-times flash-remove"></span>
+      </div>
     <% end %>
     
     <%= yield %>

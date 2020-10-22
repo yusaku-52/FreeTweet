@@ -174,30 +174,38 @@
     border-bottom: none;
 }
 
+.user-post-none a{
+    font-weight: normal;
+}
+
 .user-like-border{
     border-bottom: 2px solid rgb(23, 224, 23);
 }
 
+.user-like-border a{
+    font-weight: 600;
+}
+
 // users-edit
 .edit-title{
-    color: rgb(95, 93, 93);
+    color: black;
 }
 
-.form{
+.form,.create-form,.login-form{
     box-shadow: 0 2px 6px grey;
     background-color: white;
-    padding: 20px 30px; 
-    padding-bottom: 40px;
+    padding: 0px 30px; 
+    padding-bottom: 30px;
 }
 
-.form input{
+.form input,.create-form input,.login-form input{
     font-size: 20px;
     padding: 10px;
     border: 1px solid #d8dadf;
     width: 100%;
 }
 
-.form p{
+.form p,.create-form p,.login-form p{
     margin-bottom: 2px;
 }
 
@@ -215,6 +223,5 @@
 
 .submit-button{
     float: right;
-    margin-top: 50px;
     width: 30%;
 }

@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
   end
+
   def create
     @user = User.new(name: params[:name], email: params[:email],image_name: "default_user.gif",password: params[:password])
 
@@ -19,12 +20,8 @@ class UsersController < ApplicationController
       redirect_to("/users/#{@user.id}")
 
     else
-      render("users/new")
+      render("home/top")
     end
-  end
-
-  def new
-    @user = User.new
   end
 
   def edit
@@ -50,10 +47,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def login_form
-    
-  end
-
   def login
     @user = User.find_by(email: params[:email])
     
@@ -65,14 +58,15 @@ class UsersController < ApplicationController
       @error_message = "メールアドレスまたはパスワードが違います"
       @email = params[:email]
       @password = params[:password]
-      render("users/login_form")
+      @user = User.new
+      render("home/top")
     end
   end
 
   def logout
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
-    redirect_to("/login")
+    redirect_to("/home/top")
   end
   
   def ensure_correct_user

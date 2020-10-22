@@ -5,7 +5,54 @@
         <p>あなたも呟いてみましょう！</p>
     </div>
     <div class = "new-login">
-        <a href="/users/signup" class ="new-btn btn">新規登録</a>
-        <a href="/login" class ="login-btn btn">ログイン</a>
+        <a class ="new-btn btn">新規登録</a>
+        <a class ="login-btn btn">ログイン</a>
     </div>
+    <%# 以下モーダル　%>
+    <div class="signup-modal">
+        <div class ="create-form create-modal">
+            <span class="fa fa-2x fa-times modal-remove"></span>
+            <h2 class="edit-title">新規登録</h2>
+            <% @user.errors.full_messages.each do |message| %>
+                <div class ="form-error">
+                    <p><%= message %></p>
+                </div>
+            <% end %>
+            <%= form_tag("/users/create") do %>
+                <p>名前</p>
+                    <input name = "name" value = "<%= @user.name %>">
+
+                    <p>メールアドレス</p>
+                    <input name = "email" value = "<%= @user.email %>">
+
+                    <p>パスワード</p>
+                    <input type="password" name = "password" <%= @user.password %>>
+
+                    <div class="submit-button">
+                        <input class="button" type="submit" value = "新規登録">
+                    </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="signin-modal">
+            <div class="login-form login-modal">
+                <span class="fa fa-2x fa-times modal-remove"></span>
+                <h2 class="edit-title">ログイン画面</h2>
+                <% if @error_message %>
+                    <div class ="form_error">
+                        <p><%= @error_message %></p>
+                    </div>
+                <% end %>
+                <%= form_tag("/login") do %>
+                    <p>パスワード</p>
+                    <input type="password" name ="password" value ="<%= @password %>">
+                    <p>メールアドレス</p>  
+                    <input name ="email" value ="<%= @email %>">
+                    <div class="submit-button">
+                        <input class="button" type="submit" value = "送信">
+                    </div>
+                <% end %>
+            </div>
+        </div>
 </div>

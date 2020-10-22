@@ -12,9 +12,7 @@ Rails.application.routes.draw do
 
   #usersルーティング
   get "users/index" => "users#index"
-  get "users/signup" => "users#new"
   post "users/create" => "users#create"
-  get "login" => "users#login_form"
   post "login" => "users#login"
   post "logout" => "users#logout"
 
@@ -29,6 +27,7 @@ Rails.application.routes.draw do
   post "likes/:post_id/destroy" => "likes#destroy"
 
   #homeルーティング
-  get 'home/top' => "home#top"
+  get '/' => "home#top"
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
