@@ -48288,3 +48288,12 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 249ms (Views: 233.8ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2020-10-23 18:46:45 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 180ms (Views: 166.4ms | ActiveRecord: 0.9ms)
+
+
