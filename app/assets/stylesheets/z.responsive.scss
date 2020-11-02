@@ -1,0 +1,128 @@
+@media (max-width:670px){
+    //home
+    
+    .top-main{
+        padding-top: 10px;
+    }
+
+    .top-title{
+        height: 230px;
+    }
+
+    .top-title h1{
+        font-size: 50px;
+    }
+
+    .top-title p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .responsive-height{
+        line-height: 20px;
+    }
+
+    .top-main{
+        background-position: center center;
+        background-size: auto;
+    }
+
+    .header-list{
+        display: none;
+    }
+
+    .create-modal, .login-modal {
+        top: 10%;
+        left: 6%;
+        width: 90%;
+    }
+
+    .submit-button {
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .login-btn{
+        margin-top: 40px;
+    }
+
+    .menu-icon{
+        float: right;
+        margin-top: 15px;
+        margin-right: 20px;
+        color: white;
+        display: inline-block;
+    }
+
+    .menu-list{
+        display: block;
+        position: fixed;
+        top: 80px;
+        z-index: 20;
+        right: -205px;
+        background-color: rgb(35, 30, 54);
+        width: 205px;
+    }
+
+    .menu-list a{
+        color: white;
+        display: block;
+        font-size: 30px;
+        border-bottom: solid thin white;
+        padding: 10px;
+    }
+
+    .menu-list .menu-title{
+        border-bottom: solid thick rgb(88, 93, 161);
+        font-weight: 600;
+    }
+
+    // users/index
+    .container{
+        margin: 0 auto;
+        padding: 0 0;
+    }
+
+    .posts-list{
+        padding: 10px 20px;
+    }
+
+    .user-list-name a{
+        margin-left: 20px;
+    }
+
+    // users/show
+    .users-show{
+        padding-top: 30px;
+    }
+
+    .user-post-like a{
+        padding: 0;
+    }
+
+    .clear{
+        clear: left;
+    }
+
+    // posts/create
+    .tweet-page{
+        margin-left: 30px;
+    }
+
+    .posts-new-item{
+        padding: 30px 0px;
+    }
+    .post-form input{
+        margin-right: 20px;
+    }
+
+    // users/edit
+    .form{
+        padding-bottom: 110px;
+    }
+
+    //posts/edit
+    .edit-title{
+        margin-left: 30px;
+    }
+}

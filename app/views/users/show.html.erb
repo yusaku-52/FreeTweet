@@ -19,6 +19,7 @@
             <li class="user-like-index">
                 <%= link_to("いいね！","/users/#{@user.id}/likes") %>
             </li>
+            <div class ="clear"></div>
         </ul>
 
         <% @user.posts.each do |post| %>
